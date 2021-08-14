@@ -1,0 +1,49 @@
+====================# frequently use
+
+pwd					# print working directory
+ls					# list, view the files in the current directory
+ls -al 				# show all the files
+
+====================# moving command
+
+cd					# change directory
+cd ..				# move to prior directory
+cd ~ 				# move to home directory
+cd /				# move to first(root) directory
+
+====================# making command
+
+mkdir <name>		# make directory
+touch <file.ext>	# make new file
+vim <file>			# make new file (and please save)
+
+====================# mv(move)&cp(copy) command
+
+mv [-f | -i | -n] [-v] <source> <target>
+# rename <source> to <target>
+
+mv [-f | -i | -n] [-v] <source1> <source2> ... <directory>
+# move <sources> to <directory>
+# in the same directory, you can just type the target directory name
+# if you want to move files to parent directory, type file path : ~/<directory>
+
+cp <source> <target>
+# copy <source> as <target>
+
+<options>
+-f					# forcibly move, overwriting without confirmation
+-i 					# move, pop a message to confirm overwriting
+-n					# move, but do not overwrite
+
+-v					# showing the files after they are moved
+
+====================# rm(remove) command
+
+rmdir <name>		#remove directory
+rm <name>			#remove file
+rm -rf <name>		#remove subfiles(-r) forcibly(-f)
+
+clear 				#clear terminal
+vim/vi <file>		#execute vim/vi editor
+cat <file>			#view file contents
+

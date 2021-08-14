@@ -1,0 +1,71 @@
+=====================================================# initialize git local storage
+
+0. move to the directory that you want to use
+1. command : "git init"
+2. check <.git> directory has been created using "ls -al"
+3. You can check the status and history of <.git> using command "git status" / "git log"
+4. set user.name and user.email (search corresponding command, you just set these information at the first time)
+5. make <.gitignore>, "touch .gitignore", for managing files that don't need to push to the github
+
+------------------------
+<command flow>
+
+move target directory
+
+>git init
+>touch .gitignore
+>git add .gitignore 						# add directory to git local storage
+>git commit -m "Initialize Git Repository"	# commit with the comment
+
+write .gitignore file
+
+#finish initialize git local storage
+------------------------
+
+=====================================================# link git local storage to a github repository
+
+0. create a repository on the github
+
+>git branch -m main 						# merge branch "master(maybe)" to main, this is same thing to change the branch name to "main"
+>git remote add <name> <url_of_repo>		# <name> is the name of the remote storage(usually origin), <url_of_repo> is the url of the github repository
+>git add <something> 
+>git commit -m "comments"
+>git push <name> <branch name>				# push <name> remote storage(branch <branch name>) to the github repository <url_of_repo>
+
+@IF YOU HAVE SOME ERROR WITH THIS MESSAGE
+! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/sunnong826/git_1.git'  
+synchronization with this command
+>git pull --rebase <name> main
+
+
+<useful command>
+
+>git remote add <name> <url>				# create <name> remote storage linked to <url> github repository
+>git remote									# list the remote storage
+>git remote -v 								# list the remote storage name and the url of the github repository
+>git remote rm <name>						# remove <name> remote storage
+
+>git branch <name>							# create <name> branch
+>git branch									# list current local branch
+>git branch -m <old name> <new name>		# change a branch name <old name> to <new name>, -m is mergge, 
+>git branch -d <name>						# delete <name> branch
+
+>git checkout <name>						# change current branch to <name> branch
+>git checkout -b <name>						# create <name> branch and move to the created branch
+
+>git merge <branch>							# merge <branch> to the current branch
+
+=====================================================# delete local git storage
+
+>rm -rf .git								# delete local git storage
+
+=====================================================# common flow to push github
+
+0. create or modify some files
+
+>git add .									# git add all / ">git add <filename>" can update a modified <filenema> only
+>git commit -m "comments"					# commit with "comments"
+>git push origin <branch name>				# update github
+
+
